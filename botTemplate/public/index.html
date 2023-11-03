@@ -6,13 +6,19 @@
     <title>OpenAI Chat</title>
 </head>
 <body>
-    <form id="chatForm">
+    <div style="width: 100%; height: 100%; position: relative; background: linear-gradient(180deg, #78BAEA 11%, #78BAEA 29%, #FFFEFE 100%)"></div>
+    <form style="position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%);" id="chatForm">
         <label for="userInput">Your message:</label>
         <input type="text" id="userInput" name="userInput">
         <button type="submit">Submit</button>
     </form>
 
-    <div id="chatOutput"></div>
+    <div id="inputBox" style="position:absolute; left: 10%; width: 300px; background-color: grey;">
+        <p style="margin-top: 5px; margin-left: 5px; margin-right:5px; margin-bottom:5px" id="inputText"></p>
+    </div>
+    <div id="chatBox" style="position:absolute; right: 10%; width: 300px; background-color: lightgrey;">
+        <p style="margin-top: 5px; margin-left: 5px; margin-right:5px; margin-bottom:5px" id="chatOutput"></p>
+    </div>
 
     <script src="script.js"></script>
 </body>

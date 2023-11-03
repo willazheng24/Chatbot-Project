@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const OpenAI = require('openai');
-const openai = new OpenAI({ apiKey:'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'}); //replace 'API Key' with your API key
+const openai = new OpenAI({ apiKey:''}); //replace 'API Key' with your API key
 
 app.use(express.json());
 app.use(express.static('public'));

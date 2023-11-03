@@ -1,7 +1,7 @@
 document.getElementById('chatForm').addEventListener('submit', async function (event) {
     event.preventDefault();
     const userInput = document.getElementById('userInput').value;
-
+    document.getElementById('inputText').textContent = userInput;
     const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
@@ -11,5 +11,7 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
     });
 
     const data = await response.json();
-    document.getElementById('chatOutput').innerText = data.message;
+    document.getElementById('chatOutput').textContent = data.message;
 });
+
+document.body.style.backgroundColor = 'lightpink';
