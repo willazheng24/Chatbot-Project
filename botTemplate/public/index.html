@@ -20,6 +20,67 @@
             overflow: hidden;
             border-radius: 50%;
         }
+        #chatForm {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #chatForm label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        #chatForm input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #chatForm button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #78BAEA;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #chatForm button:hover {
+            background-color: #5d99c4;
+        }
+
+        #chatBox, #inputBox {
+            position: absolute;
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #inputBox {
+            left: 10%;
+            background-color: #B7B8B8;
+            color: #fff;
+        }
+
+        #chatBox {
+            right: 10%;
+            background-color: #D7D8D9;
+            color: #1E9FBB
+        }
+
+        p {
+            margin: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -28,17 +89,17 @@
     </div>
 
 
-    <form style="position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%);" id="chatForm">
+    <form id="chatForm">
         <label for="userInput">Your message:</label>
         <input type="text" id="userInput" name="userInput">
         <button type="submit">Submit</button>
     </form>
 
-    <div id="inputBox" style="position:absolute; left: 10%; width: 300px; background-color: grey;">
-        <p style="margin-top: 5px; margin-left: 5px; margin-right:5px; margin-bottom:5px" id="inputText"></p>
+    <div id="inputBox">
+        <p id="inputText"></p>
     </div>
-    <div id="chatBox" style="position:absolute; right: 10%; width: 300px; background-color: lightgrey;">
-        <p style="margin-top: 5px; margin-left: 5px; margin-right:5px; margin-bottom:5px" id="chatOutput"></p>
+    <div id="chatBox">
+        <p id="chatOutput"></p>
     </div>
     <div id="grad"></div>
     <script src="script.js"></script>
