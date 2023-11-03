@@ -13,5 +13,3 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
     const data = await response.json();
     document.getElementById('chatOutput').textContent = data.message;
 });
-
-document.body.style.backgroundColor = 'lightpink';
