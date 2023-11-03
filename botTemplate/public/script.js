@@ -16,5 +16,3 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
     const elementHeight = document.getElementById('chatBox').clientHeight;
     document.getElementById('inputBox').style.height = elementHeight + "px"; 
 });
-
-document.body.style.backgroundColor = 'lightpink';
