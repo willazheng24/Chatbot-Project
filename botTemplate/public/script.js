@@ -2,6 +2,7 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
     event.preventDefault();
     const userInput = document.getElementById('userInput').value;
     document.getElementById('inputText').textContent = userInput;
+    document.getElementById('chatOutput').textContent = "Taylor is writing...";
     const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
@@ -12,6 +13,8 @@ document.getElementById('chatForm').addEventListener('submit', async function (e
 
     const data = await response.json();
     document.getElementById('chatOutput').textContent = data.message;
+    const elementHeight = document.getElementById('chatBox').clientHeight;
+    document.getElementById('inputBox').style.height = elementHeight + "px"; 
 });
 
 document.body.style.backgroundColor = 'lightpink';
