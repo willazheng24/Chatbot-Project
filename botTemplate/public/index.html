@@ -15,15 +15,17 @@
             width: 300px;
             height: 250px;
             position: absolute;
-            top: 60%;
+            bottom: 0%;
+            left: 20%;
             
             overflow: hidden;
             border-radius: 50%;
         }
         #chatForm {
             position: absolute;
-            bottom: 20px;
-            left: 50%;
+            bottom: 5%;
+            right: 10%;
+            width: 250px;
             transform: translateX(-50%);
             background-color: #fff;
             padding: 10px;
@@ -32,14 +34,18 @@
 
         #chatForm label {
             display: block;
+            font-family: Roboto, sans-serif;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-bottom:5px;
+            color: #5d99c4;
         }
 
         #chatForm input {
-            width: 100%;
-            padding: 5px;
-            border: 1px solid #ccc;
+            width: 90%;
+            font-family: Roboto, sans-serif;
+            padding: 10px;
+            border: 0.5px solid #ccc;
             border-radius: 5px;
         }
 
@@ -50,35 +56,13 @@
             background-color: #78BAEA;
             color: #fff;
             border: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
             border-radius: 10px;
             cursor: pointer;
         }
         #chatForm button:hover {
             background-color: #5d99c4;
-        }
-
-        #chatBox, #inputBox {
-            position: absolute;
-            width: 300px;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        #inputBox {
-            left: 10%;
-            background-color: #B7B8B8;
-            color: #fff;
-        }
-
-        #chatBox {
-            right: 10%;
-            background-color: #D7D8D9;
-            color: #1E9FBB
-        }
-
-        p {
-            margin: 5px;
         }
 
     </style>
@@ -90,14 +74,15 @@
 
 
     <form id="chatForm">
-        <label for="userInput">Your message:</label>
+        <label for="userInput">Type here:</label>
         <input type="text" id="userInput" name="userInput">
         <button type="submit">Submit</button>
     </form>
 
     <h4 style="position:absolute; left: 10%; top: 12%; width: 400px; 
     font-family: Baskerville, sans-serif;">TAYLOR SWIFT CHATBOT</h4>
-    <div id="chatBox" style="position:absolute; left: 10%; top: 20%; width: 400px; border-radius: 25px; background-color: lightslategrey;">
+    <div id="chatBox" style="position:absolute; left: 10%; top: 20%; width: 400px; border-radius: 25px; 
+    background-color: #B7B8B8; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
         <p style="margin-top: 10px; margin-left: 10px; margin-right:10px; margin-bottom:10px; 
         color: white; font-family: Baskerville, sans-serif;" id="chatOutput">
         Hi! I'm Taylor. Ask me about anything and I'll write some song lyrics for you!</p>
@@ -105,9 +90,10 @@
 
     <h4 style="position:absolute; right: 10%; top: 12%; width: 400px; 
     font-family: Baskerville, sans-serif;">YOUR INPUT</h4>
-    <div id="inputBox" style="position:absolute; right: 10%; top: 20%; width: 400px; border-radius: 25px; background-color: lightgrey; font-family: Roboto, sans-serif">
+    <div id="inputBox" style="position:absolute; right: 10%; top: 20%; width: 400px; border-radius: 25px; 
+    background-color: #D7D8D9; font-family: Roboto, sans-serif; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
         <p style="margin-top: 10px; margin-left: 10px; margin-right:10px; margin-bottom:10px; 
-        font-family: Baskerville, sans-serif" id="inputText">
+        font-family: Baskerville, sans-serif; color: #1E9FBB" id="inputText">
         You asked me:
         <br></br></p>
     </div>
