@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI Chat</title>
+    <title>Taylor Swift Chatbot</title>
+    <!-- styles for some of the elements-->
     <style>
         #grad {
             height: 700px;
@@ -68,17 +69,19 @@
     </style>
 </head>
 <body>
+    <!-- avatar -->
     <div class="image-cropper">
         <img src="avatar.png" alt="Chatbot Avatar">
     </div>
 
-
+    <!-- input form -->
     <form id="chatForm">
         <label for="userInput">Type here:</label>
         <input type="text" id="userInput" name="userInput">
         <button type="submit">Submit</button>
     </form>
 
+    <!-- chatbot bubble and header (left, displays taylor's responses)-->
     <h4 style="position:absolute; left: 10%; top: 12%; width: 400px; 
     font-family: Baskerville, sans-serif;">TAYLOR SWIFT CHATBOT</h4>
     <div id="chatBox" style="position:absolute; left: 10%; top: 20%; width: 400px; border-radius: 25px; 
@@ -88,6 +91,7 @@
         Hi! I'm Taylor. Ask me about anything and I'll write some song lyrics for you!</p>
     </div>
 
+    <!-- chatbot bubble and header (right, displays user input) -->
     <h4 style="position:absolute; right: 10%; top: 12%; width: 400px; 
     font-family: Baskerville, sans-serif;">YOUR INPUT</h4>
     <div id="inputBox" style="position:absolute; right: 10%; top: 20%; width: 400px; border-radius: 25px; 
@@ -97,6 +101,7 @@
         You asked me:
         <br></br></p>
     </div>
+    <!--background gradient-->
     <div id="grad"></div>
     <script src="script.js"></script>
 </body>
